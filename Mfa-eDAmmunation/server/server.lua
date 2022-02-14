@@ -21,7 +21,7 @@ AddEventHandler("</eDen:BuyAmmunation", function(Type, TypeMoney, Value, Label, 
             xPlayer.addInventoryItem(Value, 1)
             xPlayer.showNotification(("~o~eDAmmunation\n~s~Vous venez d'acheter %s."):format(Label))
         else
-            xPlayer.showNotification(("~o~eDAmmunation\n~s~Vous n'avez pas assez d'argent il vous manque ~g~%s$."):format(Price-xPlayer.getAccount(TypeMoney))) 
+            xPlayer.showNotification(("~o~eDAmmunation\n~s~Vous n'avez pas assez d'argent il vous manque ~g~%s$."):format(Price-xPlayer.getAccount(TypeMoney).money)) 
         end
     elseif (Type == "arme") then
         if (xPlayer.getAccount(TypeMoney).money >= Price) then
@@ -41,7 +41,7 @@ AddEventHandler("</eDen:BuyAmmunation", function(Type, TypeMoney, Value, Label, 
                 xPlayer.showNotification(("~o~eDAmmunation\n~s~Vous avez déja cette arme.")) 
             end 
         else
-            xPlayer.showNotification(("~o~eDAmmunation\n~s~Vous n'avez pas assez d'argent il vous manque ~g~%s$."):format(Price-xPlayer.getAccount(TypeMoney))) 
+            xPlayer.showNotification(("~o~eDAmmunation\n~s~Vous n'avez pas assez d'argent il vous manque ~g~%s$."):format(Price-xPlayer.getAccount(TypeMoney).money)) 
         end
     end
 end)
