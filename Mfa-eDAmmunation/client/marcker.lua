@@ -45,9 +45,9 @@ InitMarkerAmmunation = function()
             if not InZone then
                 Wait(500)
             else
-            Wait(1)
+                Wait(1)
+            end
         end
-    end
     end)
     print(("%s ^5Create^7 by ^1eDen"):format(GetCurrentResourceName()))
 end
